@@ -19,7 +19,7 @@ test acceptation:
     stage: Test acceptation
     services:
         - name: docker:dind
-        - alias: docker
+          alias: docker
    
     script:
         - docker load < alpinehelloworld.tar
