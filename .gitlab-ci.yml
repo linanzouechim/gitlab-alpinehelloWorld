@@ -1,6 +1,6 @@
 docker-build:
     image: docker:latest
-    stage: build
+    stage: buildd
     services:
         - docker:dind
     script:
