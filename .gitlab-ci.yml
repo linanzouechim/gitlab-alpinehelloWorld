@@ -9,11 +9,16 @@ build:
         - docker:dind
     script:
         - docker build -t alpinehelloworld .
+        - docker save alpinehelloworld > alpinehelloworld.tar
+    artifacts:
+        paths:
+            - alpinehelloworld.tar
 
 test acceptation:
     image: docker:latest
     stage: Test acceptation
     services:
         - docker:dind
+   
     script:
         - docker run  -d--name webapp alpinehelloworld
