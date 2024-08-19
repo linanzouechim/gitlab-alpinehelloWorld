@@ -21,4 +21,5 @@ test acceptation:
         - docker:dind
    
     script:
+        - docker load < alpinehelloworld.tar
         - docker run  -d --name webapp alpinehelloworld
