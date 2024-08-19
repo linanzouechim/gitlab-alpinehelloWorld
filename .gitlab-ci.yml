@@ -1,3 +1,8 @@
+image: docker:latest
+services:
+        - name: docker:dind
+          alias: docker
+
 stages:
     - Build image
     - Test acceptation
@@ -17,9 +22,7 @@ build:
 test acceptation:
     image: docker:latest
     stage: Test acceptation
-    services:
-        - name: docker:dind
-          alias: docker
+    
    
     script:
         - docker load < alpinehelloworld.tar
