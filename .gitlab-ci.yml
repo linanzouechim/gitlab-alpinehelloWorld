@@ -18,7 +18,8 @@ test acceptation:
     image: docker:latest
     stage: Test acceptation
     services:
-        - docker:dind
+        - name: docker:dind
+        - alias: docker
    
     script:
         - docker load < alpinehelloworld.tar
