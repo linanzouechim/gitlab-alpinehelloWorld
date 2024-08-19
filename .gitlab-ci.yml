@@ -21,4 +21,4 @@ test acceptation:
         - docker:dind
    
     script:
-        - docker run  -d--name webapp alpinehelloworld
+        - docker run  -d --name webapp alpinehelloworld
