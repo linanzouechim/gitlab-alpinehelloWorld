@@ -36,8 +36,8 @@ release image:
     stage: Release image
     script:
         - docker load < alpinehelloworld.tar
-        - docker tad alpinehelloworld "${IMAGE_NAME}:${CI_COMMIT_REF_NAME}"
-        - docker tad alpinehelloworld "${IMAGE_NAME}:${CI_COMMIT_SHORT_SHA}"
+        - docker tag alpinehelloworld "${IMAGE_NAME}:${CI_COMMIT_REF_NAME}"
+        - docker tag alpinehelloworld "${IMAGE_NAME}:${CI_COMMIT_SHORT_SHA}"
         - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
         - docker push "${IMAGE_NAME}:${CI_COMMIT_REF_NAME}"
         - docker push "${IMAGE_NAME}:${CI_COMMIT_SHORT_SHA}"
