@@ -23,6 +23,6 @@ test acceptation:
     script:
         - docker load < alpinehelloworld.tar
         - docker run  -d -p 80:5000 --env PORT=5000 --name webapp alpinehelloworld
-        - sleep 5s
-        - RUN apk --no-cache add curl
+        - sleep 5
+        - apk --no-cache add curl
         - curl "http://localhost" | grep -q "Hello world"
