@@ -1,4 +1,2 @@
 # alpinehelloworld
-An Alpine-based Docker example By EAZYTraining
-
-[![Build Status](http://ip10-0-0-3-bsu2msf734ug0cfcege0-8080.direct.docker.labs.eazytraining.fr/buildStatus/icon?job=deploiement)](http://ip10-0-0-3-bsu2msf734ug0cfcege0-8080.direct.docker.labs.eazytraining.fr/job/deploiement/)
+Il s'agissait ici de créer un pipeline dans lequel on devait builder l'image du site, la tester, puis la pousser dans la registry de gitlab.
